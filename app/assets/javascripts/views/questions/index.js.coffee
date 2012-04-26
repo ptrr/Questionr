@@ -19,7 +19,8 @@ class Formr.Views.QuestionsIndex extends Backbone.View
     console.log(attributes)
     @collection.create attributes,
       wait: true
-      success: -> $('#new_question')[0].reset()
+      success: (model, response) ->
+        console.log(response)
       error: @handleError
   
   createTextField: (e) ->
@@ -31,8 +32,8 @@ class Formr.Views.QuestionsIndex extends Backbone.View
 	
   appendQuestion: (question) ->
     view = new Formr.Views.Question(model: question)
-    @$('#form_container').prepend(view.render().el).animate({
-    backgroundColor: '#f3f3f3'}, 500)
+    @$('#form_container').prepend(view.render().el).children().animate({
+    backgroundColor: '#efefef'}, 300)
 
   handleError: (question, response) ->
     if response.status == 422

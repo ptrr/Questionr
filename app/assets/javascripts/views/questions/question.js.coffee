@@ -4,7 +4,7 @@ class Formr.Views.Question extends Backbone.View
   className: "control-group"
   
   events:
-    "click .title": "edit"
+    "dblclick .title": "edit"
     "blur .question_input" : "close"
     'submit .title_form': 'handleDefault'
 
@@ -22,8 +22,8 @@ class Formr.Views.Question extends Backbone.View
 
 
   close: (e)->
-    console.log($(e.currentTarget).parents('.title').children('span'))
-    @model.save title: e.value,
+    console.log(e.currentTarget.value)
+    @model.save title: e.currentTarget.value,
       wait: true
       success: (model, response) ->
         model.fetch()

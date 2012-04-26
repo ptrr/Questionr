@@ -1,8 +1,8 @@
 <div class="title" id="question_<%=@question.get('id') %>">
-  <span><%= @question.get('title') %></span>
+  <span class="label label-info"><%=@question.get('question_type') %></span>  
+  <span><strong><%= @question.get('title') %>&nbsp;<i class="icon-edit yellow"></i><strong></span>
   <form class="title_form">
     <input class="question_input" type="text" value="<%=@question.get('title')%>" name="question_title_<%=@question.get("id") %>" />
   </form>
 </div>
 
-<%=@question.parse()%>
