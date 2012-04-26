@@ -3,12 +3,7 @@ class Formr.Views.QuestionsIndex extends Backbone.View
   template: JST['questions/index']
 
   events:
-    'submit #new_question': 'createQuestion'
-    'click #new_text_field': 'createTextField'
-    'click #new_text_area': 'createTextArea'
-    'click #new_checkbox': 'createTextArea'
-    'click #new_radiobutton': 'createTextArea'
-    'click #new_select_field': 'createTextArea'
+    'click .add_question': 'createQuestion'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -19,9 +14,9 @@ class Formr.Views.QuestionsIndex extends Backbone.View
     @collection.each(@appendQuestion)
     this
 
-  createQuestion: (question) ->
-    question.preventDefault()
-    attributes = title: $('#new_question_title').val()
+  createQuestion: (e) ->
+    attributes = title: e.target.attributes[1].nodeValue, question_type: e.target.attributes[1].nodeValue
+    console.log(attributes)
     @collection.create attributes,
       wait: true
       success: -> $('#new_question')[0].reset()
@@ -36,7 +31,8 @@ class Formr.Views.QuestionsIndex extends Backbone.View
 	
   appendQuestion: (question) ->
     view = new Formr.Views.Question(model: question)
-    @$('#form_container').prepend(view.render().el)
+    @$('#form_container').prepend(view.render().el).animate({
+    backgroundColor: '#f3f3f3'}, 500)
 
   handleError: (question, response) ->
     if response.status == 422

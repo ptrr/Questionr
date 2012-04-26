@@ -22,6 +22,24 @@ $warning-yellow: #f3edd2;
 i{
   font-size: 1em;
 }
+
+.title.editing span{
+  display: none;
+}
+
+.title span{
+  display: block;
+}
+
+.title input
+{
+  display:none;
+}
+
+.title.editing input{
+  display: block;
+}
+
 #form_container{
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
@@ -41,7 +59,7 @@ i{
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    background-color: #f2f2f2;
+    background-color: #ffffee;
     label{
       font-size: 1.3em;
     }

@@ -1,9 +1,6 @@
 <div class="span4">
-Question Type</h2>
-<form id="new_question" class="form-horizontal">
-  <input type="text" name="title" id="new_question_title">
-  <input type="submit" value="Add" class="btn btn-large btn-primary">
-</form>
+<h2>Question Type</h2>
+
 <ul class="nav nav-tabs nav-stacked">
   <li>
     <a class="add_question" data-type="text_field" href="#" id="new_text_field">
@@ -12,24 +9,24 @@ Question Type</h2>
     </a>
   </li>
   <li>
-    <a class="add_question" data-type="" href="#" id="new_text_area">
+    <a class="add_question" data-type="text_area" href="#" id="new_text_area">
     <i class="icon-plus green"></i>
     Text Area</a>
   </li>
   <li>
-    <a class="add_question" data-type="" href="#" id="new_radiobutton">
+    <a class="add_question" data-type="radiobuttons" href="#" id="new_radiobutton">
     <i class="icon-plus green"></i>
     Radiobutton Field
     </a>
   </li>
   <li>
-    <a class="add_question" data-type="" href="#" id="new_checkbox">
+    <a class="add_question" data-type="checkboxes" href="#" id="new_checkbox">
     <i class="icon-plus green"></i>
     Checkbox Field
     </a>
   </li>
   <li>
-    <a class="add_question" data-type="" href="#" id="new_select_field">
+    <a class="add_question" data-type="select" href="#" id="new_select_field">
     <i class="icon-plus green"></i>
     Select Field</a>
   </li>

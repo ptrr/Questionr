@@ -2,7 +2,7 @@ class CreateQuestions < ActiveRecord::Migration
   def change
     create_table :questions do |t|
       t.string :title
-      t.string :type
+      t.string :question_type
       t.integer :form_id
 
       t.timestamps

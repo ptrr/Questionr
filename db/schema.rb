@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(:version => 20120424114951) do
 
   create_table "questions", :force => true do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "question_type"
     t.integer  "form_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

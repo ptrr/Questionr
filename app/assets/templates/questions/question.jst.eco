@@ -1,1 +1,8 @@
-<%= @question.get('title') %>
+<div class="title" id="question_<%=@question.get('id') %>">
+  <span><%= @question.get('title') %></span>
+  <form class="title_form">
+    <input class="question_input" type="text" value="<%=@question.get('title')%>" name="question_title_<%=@question.get("id") %>" />
+  </form>
+</div>
+
+<%=@question.parse()%>
