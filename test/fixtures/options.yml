@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  option_label: MyString
+  option_value: MyString
+
+two:
+  option_label: MyString
+  option_value: MyString

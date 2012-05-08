@@ -1,5 +1,4 @@
 class Formr.Views.QuestionsIndex extends Backbone.View
-
   template: JST['questions/index']
 
   events:
@@ -9,7 +8,9 @@ class Formr.Views.QuestionsIndex extends Backbone.View
     @collection.on('reset', @render, this)
     @collection.on('add', @appendQuestion, this)
 
-  render: ->
+  render: (e) ->
+    console.log(e)
+    console.log("Rendering questions")
     $(@el).html(@template())
     @collection.each(@appendQuestion)
     this
@@ -22,16 +23,11 @@ class Formr.Views.QuestionsIndex extends Backbone.View
       success: (model, response) ->
         console.log(response)
       error: @handleError
-  
-  createTextField: (e) ->
-    console.log(e.target.attributes[1])
 
-  createTextArea: ->
-    alert(1)
 
 	
   appendQuestion: (question) ->
-    view = new Formr.Views.Question(model: question)
+    view = new Formr.Views.Question(model: question, collection: @question_options)
     @$('#form_container').prepend(view.render().el).children().animate({
     backgroundColor: '#efefef'}, 300)
 

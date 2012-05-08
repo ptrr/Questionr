@@ -28,7 +28,11 @@ i{
 }
 
 .title span{
-  display: block;
+  display: inline;
+}
+
+.title span.label{
+  display: inline;
 }
 
 .title input
@@ -52,7 +56,6 @@ i{
   .control-group{
     padding: 25px;
     margin: 10px;
-    border: 1px dashed #ccc;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -66,3 +69,85 @@ i{
   }
 }
 
+.option_container{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  min-height: 40px;
+  width: 70%;
+  margin-top: 20px;
+  .label{
+    clear: both!important;
+    width: 200px!important;
+    display: block;
+    margin: 10px;
+  }
+}
+
+
+.option_label_form{
+  display: none;
+}
+
+.option_label_form.editing{
+  display: block!important;
+  float: left;
+}
+
+.option_container > li > a > form > span.editing{
+  display: none;
+}
+
+
+div.title {
+  margin-bottom: 3px;  
+  span strong{
+    font-size: 1em;
+  }
+  span:hover{
+    border-bottom: 1px dashed #555;
+    cursor: pointer;
+  }
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+  background-color: #FFF!important;
+  border-color: #DDD;
+  cursor: default!important;
+}
+
+a.option_label{
+  display: block;
+  height: 29px;
+}
+
+.title_form{
+  margin: 0;
+  float: left;
+  display: block;
+}
+
+.option_input{
+  margin: 0;
+}
+.mock_form{
+  margin: 0;
+  display: block;
+  float: left;
+  height: 30px;
+  input{
+    display: block;
+    float: left;
+    margin-right: 5px!important;
+    width: 10px;
+  }
+  span{
+    display: block;
+    float: left;
+    height: 30px;
+    
+  }
+}

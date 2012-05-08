@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    @statsd.increment("creation."+(params[:question][:question_type]).to_s)
     respond_with Question.create(params[:question])
   end
 

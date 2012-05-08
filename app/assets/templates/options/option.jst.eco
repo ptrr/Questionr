@@ -1,0 +1,17 @@
+<a class="option_label">
+<% if @option.get('option_type') == "radiobuttons":%>
+  <form class="mock_form"><input type="radio" disabled="disabled" />
+  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+</form>
+<% else if @option.get('option_type') == "checkboxes":%>
+  <form class="mock_form"><input type="checkbox" disabled="disabled" />
+  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+</form>
+<%else:%>
+  <span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+<%end%>
+  <form class="option_label_form" id="option_form_<%=@option.id%>">
+    <input class="option_input" type="text" value="<%=@option.get('option_label')%>" name="option_<%=@option.id %>" />
+  </form>
+</a>
+

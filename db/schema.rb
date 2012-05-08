@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120424114951) do
+ActiveRecord::Schema.define(:version => 20120427091047) do
+
+  create_table "options", :force => true do |t|
+    t.string   "option_label"
+    t.string   "option_value"
+    t.integer  "question_id"
+    t.string   "option_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "questions", :force => true do |t|
     t.string   "title"
