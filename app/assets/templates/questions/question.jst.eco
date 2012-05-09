@@ -1,3 +1,4 @@
+<span class="remove_question"><i class="icon-remove red"></i></span>
 <div class="title" id="question_<%=@question.get('id') %>">
 <span><strong><%= @question.get('title') %>&nbsp;<i class="icon-edit"></i><strong></span>
 <form class="title_form">
@@ -6,28 +7,51 @@
 </div>
 <% if @question.get('question_type') == 'text_field':%>
 <input type='text' disabled='disabled' />
-<% else if @question.get('question_type') == 'text_area':%>
+<%end%>
+<% if @question.get('question_type') == 'text_area':%>
+
 <textarea disabled='disabled'></textarea>
-<% else if @question.get('question_type') == 'radiobuttons':%>
-<form>
-  <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-primary" />
-</form>
-<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
+<% else if @question.get('question_type') == 'select': %>
+<div class="clear_top">
 
-<% else if @question.get('question_type') == 'checkboxes':%>
-<form>
-  <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-primary" />
-</form>
-<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
-
-
-<% else if @question.get('question_type') == 'select':%>
 <select disabled='disabled'>
   <option></option>
-</textarea>
-<form>
-  <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-primary" />
-</form>
-<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
+</select>
+</div>
 <%end%>
 
+<% if @question.get('question_type') == 'radiobuttons':%>
+<form class="add_option_form">
+
+<input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-success" />
+</form>
+<div class="option_wrapper">
+<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
+</div>
+<% else if @question.get('question_type') == 'checkboxes':%>
+<form class="add_option_form">
+  <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-success" />
+</form>
+<div class="option_wrapper">
+<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
+</div>
+<% else if @question.get('question_type') == 'select':%>
+<form class="add_option_form">
+  <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-small btn-success" />
+</form>
+<div class="option_wrapper">
+
+<ul class="nav nav-tabs nav-stacked option_container" id="question_options_<%=@question.get("id")%>"></div>
+</div>
+<%end%>
+<div class="validation_container">
+  <form class="form-horizontal">
+  <div class="control-group">
+    <label class='control-label'>Verplicht?</label>
+    <div class="controls">
+    <input type="checkbox" name="question_required" value="1" />
+    </div>
+    </div>
+  </form>
+</div>
+<div class="clearfix"></div>

@@ -16,6 +16,7 @@ class OptionsController < ApplicationController
     @option.option_value = params[:option_value]
     @option.question_id = params[:question_id]
     @option.option_type = params[:option_type]
+    @option.order = params[:order]
     @option.save
     respond_with @question, @option
     #respond_with Option.create(params[:option], question_id: params[:question_id])
@@ -28,6 +29,7 @@ class OptionsController < ApplicationController
     @option.option_value = params[:option_value]
     @option.question_id = params[:question_id]
     @option.option_type = params[:option_type]    
+    @option.order = params[:order]
     @option.save
     respond_with @question, @option
   end

@@ -53,7 +53,12 @@ i{
   -moz-border-radius: 4px;
   border-radius: 4px;
   min-height: 206px;
+  background-color: #efefef;
+  -moz-box-shadow: inset 0 0 5px #cecece;
+  -webkit-box-shadow: inset 0 0 5px #cecece;
+  box-shadow: inner 0 0 5px #cecece;  
   .control-group{
+    position: relative;
     padding: 25px;
     margin: 10px;
     -webkit-border-radius: 4px;
@@ -66,9 +71,26 @@ i{
     label{
       font-size: 1.3em;
     }
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
+
+.title{
+  clear: both;
+  width: 100%;
+}
 .option_container{
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -77,8 +99,7 @@ i{
   -moz-border-radius: 4px;
   border-radius: 4px;
   min-height: 40px;
-  width: 70%;
-  margin-top: 20px;
+  width: 300px;
   .label{
     clear: both!important;
     width: 200px!important;
@@ -86,8 +107,52 @@ i{
     margin: 10px;
   }
 }
+.option_wrapper{
+  width: 300px;
+  min-height: 20px;
+  float: left;
+}
 
+.clear_top{
+  height: 50px;
+  clear: both;
+}
 
+.validation_container{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  min-height: 20px;
+  width: 260px;
+  float: right;
+  border: 1px solid #ddd;
+  .control-group{
+    padding: 5px!important;
+    background: transparent!important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+    label{
+      font-size: 1em!important;
+      width: 50px;
+    }
+    .controls{
+      margin-left: 80px!important;
+    }
+  }
+}
 .option_label_form{
   display: none;
 }
@@ -95,6 +160,22 @@ i{
 .option_label_form.editing{
   display: block!important;
   float: left;
+}
+
+.remove_question{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+  width: 10px;
+  display: block;
+}
+
+.option_label > span{
+  float: right;
+  width: 10px;
+  display: block;
+  padding: 5px;
 }
 
 .option_container > li > a > form > span.editing{
@@ -124,14 +205,25 @@ a.option_label{
   height: 29px;
 }
 
+.add_option_form{
+  display: block;
+  clear:both;
+  position: absolute;
+  left: 350px;
+}
+
 .title_form{
   margin: 0;
-  float: left;
   display: block;
+  clear: both;
 }
 
 .option_input{
   margin: 0;
+  input{
+    float: right;
+    width: 200px;
+  }
 }
 .mock_form{
   margin: 0;
@@ -143,11 +235,12 @@ a.option_label{
     float: left;
     margin-right: 5px!important;
     width: 10px;
+    margin-top: 10px!important;
   }
   span{
     display: block;
     float: left;
     height: 30px;
-    
+    margin-top: 5px;
   }
 }

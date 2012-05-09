@@ -8,8 +8,8 @@ class Formr.Views.Question extends Backbone.View
     "blur .question_input" : "close"
     'submit .title_form': 'handleDefault'
     "click .add_option" : "addOption"
+    "click .remove_question" : "removeQuestion"
 
-    #
 
   initialize: ->
     @model.on('change', @render, this)
@@ -17,9 +17,8 @@ class Formr.Views.Question extends Backbone.View
     #@model.on('highlight', @highlightWinner, this)
 
   render: ->
-    console.log("Rendering question " + @model.id)
     $(@el).html(@template(question: @model))
-    $(@el).children('span').html(@model.get('title'))
+    $(@el).children('span.title').html(@model.get('title'))
     @questionOptions = new Formr.Collections.Options()
     @questionOptions.url = @questionOptions.create_url(@model)
     @questionOptions.fetch()
@@ -31,6 +30,12 @@ class Formr.Views.Question extends Backbone.View
     $(e.currentTarget).addClass("editing")
     $('input[name="question_title_'+@model.id+'"]').focus()
     
+  removeQuestion: (e) ->
+    @model.destroy
+      wait: true
+      success: ->
+        $(e.currentTarget).parent().remove()
+      error: @handleError
 
 
   close: (e)->
@@ -47,7 +52,9 @@ class Formr.Views.Question extends Backbone.View
     question_id = @model.id
     question_type =  @model.get('question_type')
     #option.url = option.create_url(question_id)
-    @questionOptions.create question_id: question_id, option_label: 'Optie', option_type: question_type,
+    order = @questionOptions.length
+    console.log (order)
+    @questionOptions.create question_id: question_id, option_label: 'Optie', option_type: question_type, order: order,
       #url: '/api/questions/'+question_id+'/options'
       wait: true
       success: (model, response) ->

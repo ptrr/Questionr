@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require twitter/bootstrap
+//= require script
 //= require underscore
 //= require backbone
 //= require .//formr

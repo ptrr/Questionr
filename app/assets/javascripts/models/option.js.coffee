@@ -8,3 +8,4 @@ class Formr.Models.Option extends Backbone.Model
     option_label: "Nieuw"
     option_value: "Nieuw"
     question_id: 1
+    order: 0

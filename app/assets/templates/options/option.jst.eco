@@ -1,4 +1,4 @@
-<a class="option_label">
+<a class="option_label" data-id="<%=@option.id%>">
 <% if @option.get('option_type') == "radiobuttons":%>
   <form class="mock_form"><input type="radio" disabled="disabled" />
   &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
@@ -8,10 +8,13 @@
   &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
 </form>
 <%else:%>
+<form class="mock_form">
   <span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+  </form>
 <%end%>
   <form class="option_label_form" id="option_form_<%=@option.id%>">
     <input class="option_input" type="text" value="<%=@option.get('option_label')%>" name="option_<%=@option.id %>" />
   </form>
+  <span class='remove_option'><i class='icon-remove red'></i></span>
 </a>
 

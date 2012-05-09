@@ -5,6 +5,7 @@ class CreateOptions < ActiveRecord::Migration
       t.string :option_value
       t.references :question
       t.string :option_type
+      t.string :order
 
       t.timestamps
     end

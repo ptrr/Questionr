@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20120427091047) do
     t.string   "option_value"
     t.integer  "question_id"
     t.string   "option_type"
+    t.string   "order"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
