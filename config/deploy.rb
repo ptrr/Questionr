@@ -6,6 +6,9 @@ require 'bundler/capistrano'
 # cap deploy:setup
 # cap deploy:cold
 # cap deploy
+
+
+
 set :app_name, "questionr"
 
 set :rails_env, 'production'
@@ -23,7 +26,7 @@ default_run_options[:pty] = true
 
 set :spinner, false
 set :runner,'peterderuijter'
-set :use_sudo, false
+set :use_sudo, true
 
 role :web, domain                        # Your HTTP server, Apache/etc
 role :app, domain                        # This may be the same as your `Web` server
@@ -82,6 +85,16 @@ namespace :deploy do
 end
 
 namespace :deploy do
+  task :set_environment_var do
+
+    default_environment['MYSQL_PASSWORD'] = run "bash -c 'source /etc/profile && echo $MYSQL_PASSWORD'"
+    puts ENV['MYSQL_PASSWORD']
+  end
+end
+
+
+
+namespace :deploy do
 
     namespace :db do
 
@@ -107,7 +120,7 @@ namespace :deploy do
           adapter: mysql
           timeout: 5000
           user: root
-          password: <%= ENV['MYSQL_PASSWORD'] %>
+          password: #{ENV['MYSQL_PASSWORD']}
         development:
           database: #{app_name}_development
           <<: *base
@@ -143,5 +156,5 @@ namespace :deploy do
 
   end
 
-
-after 'deploy:update_code', "deploy:database_shared", 'deploy:symlink_shared',  'deploy:compile_assets'
+before 'deploy:migrate', 'deploy:set_environment_var'
+after 'deploy:update_code', "deploy:database_shared", 'deploy:symlink_shared'#,  'deploy:compile_assets'
