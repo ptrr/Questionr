@@ -2,15 +2,15 @@
 <span class="handler"></span>
 <% if @option.get('option_type') == "radiobuttons":%>
   <form class="mock_form"><input type="radio" disabled="disabled" />
-  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%><i class="icon-edit green"></i></span>
 </form>
 <% else if @option.get('option_type') == "checkboxes":%>
   <form class="mock_form"><input type="checkbox" disabled="disabled" />
-  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+  &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%><i class="icon-edit green"></i></span>
 </form>
 <%else:%>
 <form class="mock_form">
-  <span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>
+  <span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%><i class="icon-edit green"></i></span>
   </form>
 <%end%>
   <form class="option_label_form" id="option_form_<%=@option.id%>">

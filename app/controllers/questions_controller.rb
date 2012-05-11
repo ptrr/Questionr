@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
 
   def update
     @question = Question.find(params[:id])
-    @question.save
+    @question.update_attributes(params[:question])
     respond_with Form.find(params[:form_id]), @question
   end
 

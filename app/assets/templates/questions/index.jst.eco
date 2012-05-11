@@ -5,34 +5,41 @@
   <li>
     <a class="add_question" data-type="text_field" href="#" id="new_text_field">
     <i class="icon-plus green"></i>
-    Text Field
+      Voeg tekstveld toe
     </a>
   </li>
   <li>
     <a class="add_question" data-type="text_area" href="#" id="new_text_area">
     <i class="icon-plus green"></i>
-    Text Area</a>
+      Voeg groot textveld toe
+    </a>
   </li>
   <li>
     <a class="add_question" data-type="radiobuttons" href="#" id="new_radiobutton">
     <i class="icon-plus green"></i>
-    Radiobutton Field
+      Voeg radiobutton veld toe
     </a>
   </li>
   <li>
     <a class="add_question" data-type="checkboxes" href="#" id="new_checkbox">
     <i class="icon-plus green"></i>
-    Checkbox Field
+      Voeg checkbox veld toe
     </a>
   </li>
   <li>
     <a class="add_question" data-type="select" href="#" id="new_select_field">
     <i class="icon-plus green"></i>
-    Select Field</a>
+      Voeg dropdown veld toe
+    </a>
   </li>
 </ul>
+
+<div class='well'>
+  <h3>Legenda</h3>
+  <span class="handler"></span>
+</div>
 </div>
 <div class="span8">
-<h1>Form</h1>
+<h1>Vragenlijst</h1>
   <div id="form_container"></div>
 </div>
