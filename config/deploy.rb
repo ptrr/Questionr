@@ -6,15 +6,17 @@ require 'bundler/capistrano'
 # cap deploy:setup
 # cap deploy:cold
 # cap deploy
+set :app_name, "questionr"
+
 set :rails_env, 'production'
-set :domain, 'vps1820.directvps.nl'
+set :domain, 'vps1800.directvps.nl'
 set :user, 'deploy'
 
-set :repository,  "git@github.com:memocom/questionr.git"
+set :repository,  "git@github.com:memocom/#{app_name}.git"
 set :branch, "master"
 
 set :scm, :git
-set :deploy_to, "/srv/production/questionr"
+set :deploy_to, "/srv/production/#{app_name}"
 set :ssh_options, {:paranoid => true}
 
 default_run_options[:pty] = true
@@ -104,14 +106,16 @@ namespace :deploy do
         base: &base
           adapter: mysql
           timeout: 5000
+          user: root
+          password: <%= ENV['MYSQL_PASSWORD'] %>
         development:
-          database: #{shared_path}/db/development.sqlite3
+          database: #{app_name}_development
           <<: *base
         test:
-          database: #{shared_path}/db/test.sqlite3
+          database: #{app_name}_test
           <<: *base
         production:
-          database: #{shared_path}/db/production.sqlite3
+          database: #{app_name}_production
           <<: *base
         EOF
 

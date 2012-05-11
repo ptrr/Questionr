@@ -1,0 +1,15 @@
+base: &base
+  adapter: mysql
+  timeout: 5000
+  user: root
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+
+development:
+  database: #{app_name}_development
+  <<: *base
+test:
+  database: #{app_name}_test
+  <<: *base
+production:
+  database: #{app_name}_production
+  <<: *base
