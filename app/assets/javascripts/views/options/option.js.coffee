@@ -1,4 +1,4 @@
-class Formr.Views.Option extends Backbone.View
+ class Formr.Views.Option extends Backbone.View
   template: JST['options/option']
   tagName: "li"
   className: ""
@@ -15,7 +15,7 @@ class Formr.Views.Option extends Backbone.View
   render: ->
     $(@el).html(@template(option: @model))
     this
-	
+
   edit: (e)->
     $(e.currentTarget).focus()
     $("#option_label_"+@model.id).addClass("editing")
@@ -55,4 +55,4 @@ class Formr.Views.Option extends Backbone.View
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
         alert "#{attribute} #{message}" for message in messages
-  
+

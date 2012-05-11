@@ -56,9 +56,10 @@ i{
   background-color: #efefef;
   -moz-box-shadow: inset 0 0 5px #cecece;
   -webkit-box-shadow: inset 0 0 5px #cecece;
-  box-shadow: inner 0 0 5px #cecece;  
+  box-shadow: inner 0 0 5px #cecece;
   .control-group{
     position: relative;
+    cursor: move;
     padding: 25px;
     margin: 10px;
     -webkit-border-radius: 4px;
@@ -99,12 +100,15 @@ i{
   -moz-border-radius: 4px;
   border-radius: 4px;
   min-height: 40px;
-  width: 300px;
+  width: 350px;
   .label{
     clear: both!important;
     width: 200px!important;
     display: block;
     margin: 10px;
+  }
+  li{
+    cursor: pointer!important;
   }
 }
 .option_wrapper{
@@ -126,11 +130,13 @@ i{
   -moz-border-radius: 4px;
   border-radius: 4px;
   min-height: 20px;
-  width: 260px;
+  width: 300px;
   float: right;
   border: 1px solid #ddd;
   .control-group{
     padding: 5px!important;
+    margin: 0!important;
+    margin-left: 10px!important;
     background: transparent!important;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -170,7 +176,18 @@ i{
   width: 10px;
   display: block;
 }
-
+.option_label{
+  .handler{
+    background: url('handle.png') no-repeat 0px 6px;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 100%;
+    padding: 0;
+    margin-right: 10px;
+    cursor: move!important;
+  }
+}
 .option_label > span{
   float: right;
   width: 10px;
@@ -184,7 +201,7 @@ i{
 
 
 div.title {
-  margin-bottom: 3px;  
+  margin-bottom: 3px;
   span strong{
     font-size: 1em;
   }
@@ -208,8 +225,7 @@ a.option_label{
 .add_option_form{
   display: block;
   clear:both;
-  position: absolute;
-  left: 350px;
+  margin-left: 15px;
 }
 
 .title_form{

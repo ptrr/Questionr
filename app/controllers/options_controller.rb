@@ -18,20 +18,20 @@ class OptionsController < ApplicationController
     @option.option_type = params[:option_type]
     @option.order = params[:order]
     @option.save
-    respond_with @question, @option
+    respond_with Form.find(params[:form_id]), @question, @option
     #respond_with Option.create(params[:option], question_id: params[:question_id])
   end
 
   def update
-    @option = Option.find_by_id(params[:id])    
+    @option = Option.find_by_id(params[:id])
     @question = Question.find_by_id(params[:question_id])
     @option.option_label = params[:option_label]
     @option.option_value = params[:option_value]
     @option.question_id = params[:question_id]
-    @option.option_type = params[:option_type]    
+    @option.option_type = params[:option_type]
     @option.order = params[:order]
     @option.save
-    respond_with @question, @option
+    respond_with Form.find(params[:form_id]),@question, @option
   end
 
   def destroy

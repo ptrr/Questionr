@@ -1,10 +1,12 @@
 Formr::Application.routes.draw do
 
   scope "api" do
-    resources :questions do 
-      resources :options
+    resources :forms do
+      resources :questions do
+        resources :options
+      end
     end
-
   end
-  root to: "main#index"
+  resources :forms
+  root to: "forms#index"
 end

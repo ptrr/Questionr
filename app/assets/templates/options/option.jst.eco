@@ -1,4 +1,5 @@
-<a class="option_label" data-id="<%=@option.id%>">
+<a class="option_label" data-option-id="<%=@option.id%>">
+<span class="handler"></span>
 <% if @option.get('option_type') == "radiobuttons":%>
   <form class="mock_form"><input type="radio" disabled="disabled" />
   &nbsp;<span id="option_label_<%=@option.id%>"><%=@option.get('option_label')%></span>

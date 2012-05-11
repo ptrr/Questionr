@@ -5,7 +5,7 @@ class Formr.Views.OptionsIndex extends Backbone.View
     @collection.on('add', @appendOption, this)
     @collection.on('change', @backEndSort, this)
     @collection.on('reset', @render, this)
-    @collection.sort
+    @collection.sort()
 
   render: ->
     $(@el).html(@template())
@@ -14,15 +14,16 @@ class Formr.Views.OptionsIndex extends Backbone.View
 
   backEndSort: (option) ->
     collection = new Formr.Collections.Options()
-    collection.create_url(option)
+    collection.url = collection.create_option_url(option.get('question_id'))
     collection.fetch()
     $(".option_container").sortable
+      handle: '.handler'
       update: (el, ui) ->
         $(this).find('li > a').each (i) ->
-          id = $(this).attr('data-id')
-          console.log(collection)
+          id = $(this).attr('data-option-id')
+
           item = collection.get(id)
-          console.log(item.get('order'))
+          console.log(item)
           if item.get('order') != i+1 then item.save order: i+1
         collection.sort()
         collection.fetch()
@@ -30,21 +31,22 @@ class Formr.Views.OptionsIndex extends Backbone.View
 
   appendOption: (option) ->
     collection = new Formr.Collections.Options()
-    collection.create_url(option)
-    collection.fetch()
+    collection.url = collection.create_option_url(option.get('question_id'))
     view = new Formr.Views.Option(model: option)
+    collection.fetch()
     $('#question_options_'+option.get('question_id')).append(view.render().el)
     $(".option_container").sortable
+      handle: '.handler'
       update: (el, ui) ->
-        $(this).find('li > a').each (i) ->
-          id = $(this).attr('data-id')
+        $(this).find('li > a.option_label').each (i) ->
+          id = $(this).attr('data-option-id')
           console.log(collection)
           item = collection.get(id)
-          console.log(item.get('order'))
+          console.log(item)
           if item.get('order') != i+1 then item.save order: i+1
         collection.sort()
         collection.fetch()
-	
+
   handleError: (question, response) ->
     if response.status == 422
       errors = $.parseJSON(response.responseText).errors

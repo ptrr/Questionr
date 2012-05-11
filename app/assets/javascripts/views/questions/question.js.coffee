@@ -2,14 +2,14 @@ class Formr.Views.Question extends Backbone.View
   template: JST['questions/question']
   tagName: 'div'
   className: "control-group"
-  
+
   events:
     "click .title": "edit"
     "blur .question_input" : "close"
     'submit .title_form': 'handleDefault'
     "click .add_option" : "addOption"
     "click .remove_question" : "removeQuestion"
-
+    "click .question_required" : "requireQuestion"
 
   initialize: ->
     @model.on('change', @render, this)
@@ -17,6 +17,7 @@ class Formr.Views.Question extends Backbone.View
     #@model.on('highlight', @highlightWinner, this)
 
   render: ->
+    console.log(@model)
     $(@el).html(@template(question: @model))
     $(@el).children('span.title').html(@model.get('title'))
     @questionOptions = new Formr.Collections.Options()
@@ -29,7 +30,15 @@ class Formr.Views.Question extends Backbone.View
   edit: (e)->
     $(e.currentTarget).addClass("editing")
     $('input[name="question_title_'+@model.id+'"]').focus()
-    
+
+  requireQuestion: (e) ->
+    if $(e.currentTarget).attr('checked') == 'checked'
+      @model.save required: 1,
+        wait: true
+        success: (response, model) ->
+          console.log(model)
+        error: @handleError
+
   removeQuestion: (e) ->
     @model.destroy
       wait: true
@@ -61,7 +70,7 @@ class Formr.Views.Question extends Backbone.View
         model.fetch()
       error: @handleError
 
-         
+
   handleDefault: (e) ->
     console.log(e)
     @model.save title: e.currentTarget.lastElementChild.value,
@@ -72,9 +81,9 @@ class Formr.Views.Question extends Backbone.View
         $(e.currentTarget.lastElementChild).parents('.title').removeClass("editing")
       error: @handleError
     e.preventDefault()
-    
 
-  
+
+
   handleError: (option, response) ->
     if response.status == 422
       errors = $.parseJSON(response.responseText).errors

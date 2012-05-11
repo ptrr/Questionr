@@ -1,0 +1,17 @@
+.container
+  .row
+    .span6
+      %h1 Beschikbare vragenlijsten
+      %table.table.table-striped
+        %tr
+          %th Naam
+          %th Opties
+        - @forms.each do |form|
+          %tr
+            %td=form.name
+            %td=link_to 'Bewerk', edit_form_path(form.id), class: "btn btn-primary"
+
+      .form-actions
+        =form_for Form.new do |f|
+          =f.text_field :name
+          =f.submit 'Maak vragenlijst', class: 'btn btn-primary'
