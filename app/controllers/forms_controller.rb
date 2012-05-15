@@ -8,6 +8,7 @@ class FormsController < ApplicationController
   end
 
   def new
+
   end
 
   def create

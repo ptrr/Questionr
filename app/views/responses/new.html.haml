@@ -1,0 +1,30 @@
+.span12
+  =form_for @form, :html => {:class => "form-horizontal"} do |f|
+    -@form.questions.each do |question|
+      .control-group
+        %label.control-label=question.title
+        .controls
+          - if question.question_type == "text_field"
+            =text_field_tag :name => "question"+question.id.to_s
+
+          - elsif question.question_type == "text_area"
+            =text_area_tag :name => "question"+question.id.to_s
+
+          - elsif question.question_type == "radiobuttons"
+            - question.options.each do |option|
+              %label.radiobutton
+                =radio_button_tag "question"+question.id.to_s, option.option_label
+                =option.option_label
+
+          - elsif question.question_type == "checkboxes"
+            - question.options.each do |option|
+              %label.checkbox
+                =check_box_tag "question"+question.id.to_s, option.option_label
+                =option.option_label
+
+          - elsif question.question_type == "select"
+            =select_tag "question" + question.id.to_s, question.options.collect!{ |x| "<option value='"+x.option_label+"'>"+x.option_label+"</option>"}.join("").html_safe()
+
+
+    .form-actions
+      =f.submit "Sla op", :class => "btn btn-primary btn-large"

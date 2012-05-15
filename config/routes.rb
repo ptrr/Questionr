@@ -7,6 +7,8 @@ Formr::Application.routes.draw do
       end
     end
   end
-  resources :forms
+  resources :forms do
+    resources :responses
+  end
   root to: "forms#index"
 end
