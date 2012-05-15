@@ -27,6 +27,13 @@
     .container
       .content
         .row
+          .span12
+            -if flash[:notice]
+              .alert.alert-success
+                =flash[:notice]
+            -if flash[:error]
+              .alert.alert-error
+                =flash[:error]
           =yield
       %footer
         %p &copy; Company 2012

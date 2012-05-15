@@ -26,7 +26,7 @@ default_run_options[:pty] = true
 
 set :spinner, false
 set :runner,'peterderuijter'
-set :use_sudo, true
+set :use_sudo, false
 
 role :web, domain                        # Your HTTP server, Apache/etc
 role :app, domain                        # This may be the same as your `Web` server
@@ -43,12 +43,7 @@ end
 namespace :deploy do
   desc "Link shared database.yml to shared"
   task :database_shared do
-    unless File.exists?("#{shared_path}/database.yml")
-      run "mv #{release_path}/config/database.yml #{shared_path}/database.yml"
-    else
-      run "rm #{release_path}/config/database.yml"
-    end
-    run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
 
@@ -84,15 +79,6 @@ namespace :deploy do
   end
 end
 
-namespace :deploy do
-  task :set_environment_var do
-
-    default_environment['MYSQL_PASSWORD'] = run "bash -c 'source /etc/profile && echo $MYSQL_PASSWORD'"
-    puts ENV['MYSQL_PASSWORD']
-  end
-end
-
-
 
 namespace :deploy do
 
@@ -114,13 +100,13 @@ namespace :deploy do
         when running deploy:setup for all stages one by one.
       DESC
       task :setup, :except => { :no_release => true } do
-
+        @pw = capture "bash -c 'source /etc/profile && echo -n $MYSQL_PASSWORD'"
         default_template = <<-EOF
         base: &base
           adapter: mysql
           timeout: 5000
           user: root
-          password: #{ENV['MYSQL_PASSWORD']}
+          password: #{@pw.to_s}
         development:
           database: #{app_name}_development
           <<: *base
@@ -155,6 +141,4 @@ namespace :deploy do
     after "deploy:finalize_update", "deploy:db:symlink"
 
   end
-
-before 'deploy:migrate', 'deploy:set_environment_var'
-after 'deploy:update_code', "deploy:database_shared", 'deploy:symlink_shared'#,  'deploy:compile_assets'
+after 'deploy:update_code', "deploy:database_shared", 'deploy:symlink_shared',  'deploy:compile_assets'

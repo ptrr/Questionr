@@ -36,14 +36,14 @@ class Formr.Views.Question extends Backbone.View
       @model.save required: 1,
         wait: true
         success: (response, model) ->
-          console.log(model)
+          $(e.currentTarget).attr('checked', 'checked')
         error: @handleError
 
   removeQuestion: (e) ->
     @model.destroy
       wait: true
       success: ->
-        $(e.currentTarget).parent().remove()
+        $(e.currentTarget).parents('.control-group').remove()
       error: @handleError
 
 

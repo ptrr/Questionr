@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510123741) do
+ActiveRecord::Schema.define(:version => 20120515085224) do
 
   create_table "forms", :force => true do |t|
     t.string   "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20120510123741) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.boolean  "required"
+    t.boolean  "multiselect"
   end
 
 end

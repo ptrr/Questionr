@@ -3,11 +3,11 @@ window.Formr =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> 
+  init: ->
     new Formr.Routers.Questions()
-    #new Formr.Routers.Options()    
-    
-    Backbone.history.start()
+    #new Formr.Routers.Options()
+
+    Backbone.history.start({})
 
 $(document).ready ->
   Formr.init()

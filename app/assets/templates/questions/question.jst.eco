@@ -46,6 +46,15 @@
       </div>
     </div>
   </form>
+  <% if @question.get('question_type') == 'select': %>
+    <form class="form-horizontal">
+    <div class="control-group">
+      <label class='control-label'>Multiselect?</label>
+      <div class="controls">
+        <input type="checkbox" class="question_multi" <%='checked="checked"' if @question.get('multi') == true %> name="question_required" value="1" />
+      </div>
+    </div>
+  <% end %>
   <% if @question.get('question_type') == 'checkboxes' || @question.get('question_type') == 'radiobuttons' || @question.get('question_type') == 'select':%>
   <form class="add_option_form">
   <input type="submit" name="questions_option" value="Voeg optie toe" class="add_option btn btn-success" />

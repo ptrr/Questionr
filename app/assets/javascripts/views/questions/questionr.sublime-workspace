@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mys",
+				"mysql_password"
+			],
+			[
+				"app",
+				"app_name"
+			],
+			[
 				"bt",
 				"btn-primary"
 			],
@@ -24,10 +32,18 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/options/index.jst.eco",
+			"file": "/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1,
+				"buffer_size": 642,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/questions/index.jst.eco",
+			"settings":
+			{
+				"buffer_size": 1102,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,31 +51,31 @@
 			"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/options/option.jst.eco",
 			"settings":
 			{
-				"buffer_size": 939,
+				"buffer_size": 1032,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/options/index.js.coffee",
+			"file": "/Users/peterderuijter/Programming/formr/Gemfile",
 			"settings":
 			{
-				"buffer_size": 1833,
+				"buffer_size": 866,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/peterderuijter/Programming/formr/config/routes.rb",
+			"file": "/Users/peterderuijter/Programming/formr/config/deploy.rb",
 			"settings":
 			{
-				"buffer_size": 205,
+				"buffer_size": 4297,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/peterderuijter/Programming/formr/app/views/forms/index.html.haml",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 456,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -68,101 +84,6 @@
 			"settings":
 			{
 				"buffer_size": 72,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/controllers/forms_controller.rb",
-			"settings":
-			{
-				"buffer_size": 405,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/db/migrate/20120510123741_create_forms.rb",
-			"settings":
-			{
-				"buffer_size": 171,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/models/form.rb",
-			"settings":
-			{
-				"buffer_size": 36,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/views/main/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 46,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/views/forms/edit.html.erb",
-			"settings":
-			{
-				"buffer_size": 74,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
-			"settings":
-			{
-				"buffer_size": 610,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.js.coffee",
-			"settings":
-			{
-				"buffer_size": 2319,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 312,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/options.js.coffee",
-			"settings":
-			{
-				"buffer_size": 398,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/questions.js.coffee",
-			"settings":
-			{
-				"buffer_size": 203,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/peterderuijter/Programming/formr/app/controllers/options_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1211,
 				"line_ending": "Unix"
 			}
 		}
@@ -174,11 +95,11 @@
 		"selected_items":
 		[
 			[
-				":w",
+				":W",
 				":w - Save"
 			],
 			[
-				":W",
+				":w",
 				":w - Save"
 			],
 			[
@@ -203,24 +124,34 @@
 	},
 	"file_history":
 	[
+		"/Users/peterderuijter/Programming/formr/config/initializers/database.yml.erb",
+		"/Users/peterderuijter/Programming/formr/app/controllers/options_controller.rb",
+		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/questions.js.coffee",
+		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/options.js.coffee",
+		"/Users/peterderuijter/Programming/formr/app/controllers/application_controller.rb",
+		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/questions/index.js.coffee",
+		"/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
+		"/Users/peterderuijter/Programming/formr/app/views/forms/edit.html.erb",
+		"/Users/peterderuijter/Programming/formr/app/views/main/index.html.erb",
+		"/Users/peterderuijter/Programming/formr/app/models/form.rb",
+		"/Users/peterderuijter/Programming/formr/db/migrate/20120510123741_create_forms.rb",
+		"/Users/peterderuijter/Programming/formr/app/controllers/forms_controller.rb",
+		"/Users/peterderuijter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/peterderuijter/Programming/formr/app/views/forms/index.html.haml",
+		"/Users/peterderuijter/Programming/formr/config/routes.rb",
+		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/options/index.js.coffee",
+		"/Users/peterderuijter/Programming/formr/app/assets/templates/options/option.jst.eco",
+		"/Users/peterderuijter/Programming/formr/app/assets/templates/options/index.jst.eco",
 		"/Users/peterderuijter/Programming/formr/app/assets/stylesheets/app.scss",
 		"/Users/peterderuijter/Programming/formr/app/views/layouts/application.html.haml",
 		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/questions/question.js.coffee",
-		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/options.js.coffee",
 		"/Users/peterderuijter/Programming/formr/app/assets/templates/questions/question.jst.eco",
-		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/questions.js.coffee",
 		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/models/question.js.coffee",
 		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/models/option.js.coffee",
 		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/options/option.js.coffee",
-		"/Users/peterderuijter/Programming/formr/app/assets/templates/options/option.jst.eco",
-		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/options/index.js.coffee",
-		"/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
 		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/routers/questions.js.coffee",
-		"/Users/peterderuijter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/peterderuijter/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/peterderuijter/Programming/formr/db/migrate/20120424114951_create_questions.rb",
-		"/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/questions/index.js.coffee",
-		"/Users/peterderuijter/Programming/formr/app/views/main/index.html.erb"
+		"/Users/peterderuijter/Programming/formr/db/migrate/20120424114951_create_questions.rb"
 	],
 	"find":
 	{
@@ -228,7 +159,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 91.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -241,6 +172,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pw",
 			"350px",
 			"btn-small",
 			"strong",
@@ -264,28 +196,30 @@
 	"groups":
 	[
 		{
-			"selected": 13,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/options/index.jst.eco",
+					"file": "/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1,
+						"buffer_size": 642,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								505,
+								505
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -295,18 +229,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/options/option.jst.eco",
+					"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/questions/index.jst.eco",
 					"settings":
 					{
-						"buffer_size": 939,
+						"buffer_size": 1102,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								87
+								911,
+								911
 							]
 						],
 						"settings":
@@ -323,46 +257,46 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/views/options/index.js.coffee",
+					"file": "/Users/peterderuijter/Programming/formr/app/assets/templates/options/option.jst.eco",
 					"settings":
 					{
-						"buffer_size": 1833,
+						"buffer_size": 1032,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1256,
-								1256
+								316,
+								316
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CoffeeScriptBundle.tmbundle/Syntaxes/CoffeeScript.tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/peterderuijter/Programming/formr/config/routes.rb",
+					"file": "/Users/peterderuijter/Programming/formr/Gemfile",
 					"settings":
 					{
-						"buffer_size": 205,
+						"buffer_size": 866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								150,
-								150
+								192,
+								192
 							]
 						],
 						"settings":
@@ -377,200 +311,18 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/peterderuijter/Programming/formr/app/views/forms/index.html.haml",
+					"file": "/Users/peterderuijter/Programming/formr/config/deploy.rb",
 					"settings":
 					{
-						"buffer_size": 456,
+						"buffer_size": 4297,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HAML-Handcrafted.tmbundle/Syntaxes/Ruby Haml.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/peterderuijter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-					"settings":
-					{
-						"buffer_size": 72,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/peterderuijter/Programming/formr/app/controllers/forms_controller.rb",
-					"settings":
-					{
-						"buffer_size": 405,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								130,
-								130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/peterderuijter/Programming/formr/db/migrate/20120510123741_create_forms.rb",
-					"settings":
-					{
-						"buffer_size": 171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								108,
-								108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/peterderuijter/Programming/formr/app/models/form.rb",
-					"settings":
-					{
-						"buffer_size": 36,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10,
-								10
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/Users/peterderuijter/Programming/formr/app/views/main/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 46,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								46
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/peterderuijter/Programming/formr/app/views/forms/edit.html.erb",
-					"settings":
-					{
-						"buffer_size": 74,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								74,
-								74
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/Users/peterderuijter/Programming/formr/app/controllers/questions_controller.rb",
-					"settings":
-					{
-						"buffer_size": 610,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								147,
-								147
+								4270,
+								4270
 							]
 						],
 						"settings":
@@ -580,41 +332,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1603.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "index.js.coffee",
-					"settings":
-					{
-						"buffer_size": 2319,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2034,
-								2034
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScriptBundle.tmbundle/Syntaxes/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 109.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
+					"buffer": 5,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -630,6 +354,8 @@
 						],
 						"settings":
 						{
+							"auto_name": "",
+							"default_dir": "/Users/peterderuijter/Programming/formr/config/deploy",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -639,104 +365,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
-					"file": "/Users/peterderuijter/Programming/formr/app/controllers/application_controller.rb",
+					"buffer": 6,
+					"file": "/Users/peterderuijter/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 					"settings":
 					{
-						"buffer_size": 312,
+						"buffer_size": 72,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								279,
-								279
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/options.js.coffee",
-					"settings":
-					{
-						"buffer_size": 398,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								146,
-								146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScriptBundle.tmbundle/Syntaxes/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/Users/peterderuijter/Programming/formr/app/assets/javascripts/collections/questions.js.coffee",
-					"settings":
-					{
-						"buffer_size": 203,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CoffeeScriptBundle.tmbundle/Syntaxes/CoffeeScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "/Users/peterderuijter/Programming/formr/app/controllers/options_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								601,
-								601
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -788,6 +434,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"gem",
+				"Gemfile"
+			],
 			[
 				"collections",
 				"app/assets/javascripts/collections/options.js.coffee"

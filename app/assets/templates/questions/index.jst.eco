@@ -36,7 +36,9 @@
 
 <div class='well'>
   <h3>Legenda</h3>
-  <span class="handler"></span>
+  <div id="handler">Drag &amp; Drop</div>
+  <div id="edithandler" class="clearfix"><i class="icon-edit"></i> Edit in place</div>
+  <div class="clearfix"></div>
 </div>
 </div>
 <div class="span8">

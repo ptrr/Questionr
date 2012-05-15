@@ -188,6 +188,30 @@ i{
     cursor: move!important;
   }
 }
+  #edithandler{
+    display: block;
+    width: 200px;
+    height: 30px;
+    padding: 2px 10px;
+    padding: 7px 0px;
+    cursor: move!important;
+    clear: both;
+    i{
+      margin-right: 14px;
+    }
+  }
+
+  #handler{
+    background: url('handle.png') no-repeat 0px 6px;
+    display: block;
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    padding: 7px 30px;
+    cursor: move!important;
+    clear: both;
+  }
+
 .option_label > span{
   float: right;
   width: 10px;
